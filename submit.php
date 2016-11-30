@@ -17,10 +17,12 @@ if(isset($_POST["login"])){
                 echo success;
                // header("Location:success.html");
             ELSE
-                header("Location:error.html");
+                //header("Location:error.html");
+            echo Fallo;
         }
         else
-            header("Location:error.html");
+            //header("Location:error.html");
+        echo Falla3;
 
     }
     $db->closeDataBase();
