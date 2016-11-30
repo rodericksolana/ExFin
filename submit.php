@@ -37,6 +37,7 @@ else if(isset($_POST["register"])){
     }
     $db->closeDataBase();
 }
+else  echo "No recibi nada";
 
 
 ?>
