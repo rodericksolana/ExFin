@@ -14,15 +14,15 @@ if(isset($_POST["login"])){
     if(!empty($eMail) && !empty($Pwd)){
         if($db->checkUserExist($eMail,$con)){//if this user exists
             if($db->authen($eMail,$Pwd,$con))
-                echo success;
+                echo "success";
                // header("Location:success.html");
             ELSE
                 //header("Location:error.html");
-            echo Fallo;
+            echo "Fallo";
         }
         else
             //header("Location:error.html");
-        echo Falla3;
+        echo "Falla3";
 
     }
     $db->closeDataBase();
