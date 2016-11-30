@@ -7,7 +7,7 @@ if ($conn->connect_error) {
     die("Conexion fallida: " . $conn->connect_error);
 }
 // hacemos el query
-$sql = "SELECT idViajes, NombreDestino, Fotografias FROM exf_Viajes order by idViajes desc limit 5";
+$sql = "SELECT idViajes, NombreDestino, Fotografias, Descripcion FROM exf_Viajes order by idViajes desc limit 5";
 $result = $conn->query($sql);
 while ($rows = $result->fetch_assoc()){
 //echo $rows['id'];
@@ -19,7 +19,7 @@ while ($rows = $result->fetch_assoc()){
                             </div>
                         </div>";
 //echo "<br><br>";
-echo "<img class="imagenViaje" src=\"".$rows['Fotografias']."\">";
+echo "<img class=\"imagenViaje\" src=\"".$rows['Fotografias']."\">";
   //  echo "<img src =\"http://mediawiki.talentum.natware.mx/images/thumb/c/c6/Quechulachiapas.2.jpg/400px-Quechulachiapas.2\">";
 //echo "<br><br>";
 // var_dump ($rows);
@@ -28,7 +28,7 @@ echo "<img class="imagenViaje" src=\"".$rows['Fotografias']."\">";
     echo "</a>
                     <div class=\"portfolio-caption\">
                         <h4> \"".$rows['NombreDestino']."\" </h4>
-                        <p class=\"text-muted\">Website Design</p>
+                        <p class=\"text-muted\">\"".$rows['Descripcion']."\"</p>
                     </div>
                 </div>";
 }
