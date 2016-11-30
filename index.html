@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 
-<html lang="en">
+ <html lang="en">
+
 
 <head>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,8 +36,9 @@
 
 </head>
 
-<body id="page-top" class="index">
+<!-- <body id="page-top" class="index"> -->
 
+<body>
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
@@ -232,12 +235,23 @@
     </section>
 
 
+<section >
 
-		<frameset cols="280,*,600">
-                    <frame src="IMG-extrae.php" name="menu3">
-                    <frame src="IMG-extrae.php" name="menu3">
-                </frameset>
+<div id="divMensaje"> </div>
 
+<script>
+ $.get( "IMG-extrae.php", function( data ) {
+ // alert( "Data Loaded: " + data );
+
+document.getElementById("divMensaje").innerHTML = '<i>' + data + '</i>';
+});
+
+</script>
+
+
+<li>Aqui hay algo: <a href="IMG-extrae.php">Compras</a></li>
+
+</section>
    <!-- About Section -->
     <!--
 
