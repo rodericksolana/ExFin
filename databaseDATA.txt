@@ -13,6 +13,9 @@ CREATE TABLE exf_ViajeReserva (idViajeReserva int primary key auto_increment, id
 
 insert into exf_Usuarios (eMail, Pwd, TipoUsuario) values ('rsolana', 'test', 1);
 
+insert into exf_Usuarios (eMail, Pwd, TipoUsuario) values ('raul', 'prueba', 0);
+
+
 insert into exf_Agencia (NombreAgencia, DireccionAgencia, EmailAgencia, TelefonoAgencia, ImagenAgencia) values ('La Viajera', 'Paseo de la reforma', 'ravnos_merol@hotmail.com', '52897456', 'www');
 
 
