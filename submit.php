@@ -14,7 +14,8 @@ if(isset($_POST["login"])){
     if(!empty($eMail) && !empty($Pwd)){
         if($db->checkUserExist($eMail,$con)){//if this user exists
             if($db->authen($eMail,$Pwd,$con))
-                header("Location:success.html");
+                echo success;
+               // header("Location:success.html");
             ELSE
                 header("Location:error.html");
         }
