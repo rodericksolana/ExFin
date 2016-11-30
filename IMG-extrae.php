@@ -7,11 +7,11 @@ if ($conn->connect_error) {
     die("Conexion fallida: " . $conn->connect_error);
 }
 // hacemos el query
-$sql = "SELECT idViajes, NombreDestino, Fotografias, Descripcion FROM exf_Viajes order by idViajes desc limit 5";
+$sql = "SELECT idViajes, NombreDestino, Fotografias, Descripcion FROM exf_Viajes order by idViajes desc limit 6";
 $result = $conn->query($sql);
 while ($rows = $result->fetch_assoc()){
 //echo $rows['id'];
-    echo "<div class=\"col-md-6 col-sm-6 portfolio-item\">
+    echo "<div class=\"col-md-4 col-sm-6 portfolio-item\">
             <a href=\"#portfolioModal6\" class=\"portfolio-link\" data-toggle=\"modal\">
                 <div class=\"portfolio-hover\">
                             <div class=\"portfolio-hover-content\">
