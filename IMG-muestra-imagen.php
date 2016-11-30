@@ -17,11 +17,12 @@ $sql = "SELECT Fotografias FROM exf_Viajes WHERE idViajes=$idViajes";
 $result = $conn->query($sql);
 $row = mysqli_fetch_array($result);
 {
-$data=$row['imagen'];
+$data=$row['Fotografias'];
 //$type= $row['tipo'];
 }
 if ($type=="pjpeg") $type="jpeg";
 Header ("Content-type:$type");
+    alert($data);
 echo $data;
 }
 // Cerramos la conexion a la base de datos
