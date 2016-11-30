@@ -6,7 +6,7 @@
  * Time: 04:59 PM
  */
 
-require_once("config.php");
+include_once("config.php");
 
 //require_once("login.php");
 

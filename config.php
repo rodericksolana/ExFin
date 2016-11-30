@@ -7,11 +7,13 @@
  */
 
 //echo "Entre a config.php";
-define ('HOST', 'localhost');
-define ('USER', '1129839_user');
-define ('PASS', '1129839');
-define ('DB', 'daw_1129839');
 
-$con = mysqli_connect(HOST, USER, PASS, DB) or die ('Imposible conectarse');
+  $host = 'localhost';
+  $user = '1129839_user';
+  $password = '1129839';
+  $BD = 'daw_1129839';
+  $mysqli = mysqli_connect($host, $user, $password, $BD);
+
+$con = mysqli_connect($host, $user, $password, $BD);
 
 ?>
