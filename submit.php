@@ -12,8 +12,8 @@ if(isset($_POST["login"])){
     $Pwd=$_POST["Pwd"];
     $eMail=$_POST["eMail"];
     if(!empty($eMail) && !empty($Pwd)){
-        if($db->checkUserExist($eMail,$conn)){//if this user exists
-            if($db->authen($eMail,$Pwd,$conn))
+        if($db->checkUserExist($eMail,$con)){//if this user exists
+            if($db->authen($eMail,$Pwd,$con))
                 header("Location:success.html");
             ELSE
                 header("Location:error.html");
@@ -28,7 +28,7 @@ else if(isset($_POST["register"])){
     $eMail=$_POST['eMail'];
     $Pwd=$_POST['Pwd'];
     if(!empty($eMail) && !empty($Pwd)){
-        $db->register($eMail,$Pwd,$conn);
+        $db->register($eMail,$Pwd,$con);
         header("Location:success.html");
 
     }
