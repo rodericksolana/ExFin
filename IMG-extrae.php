@@ -11,9 +11,23 @@ $sql = "SELECT idViajes, NombreDestino, Fotografias FROM exf_Viajes order by idV
 $result = $conn->query($sql);
 while ($rows = $result->fetch_assoc()){
 //echo $rows['id'];
-echo "<br><br>";
+    echo "<div class=\"col-md-4 col-sm-6 portfolio-item\">
+<a href=\"#portfolioModal6\" class=\"portfolio-link\" data-toggle=\"modal\">
+ <div class=\"portfolio-hover\">
+                            <div class=\"portfolio-hover-content\">
+                                <i class=\"fa fa-plus fa-3x\"></i>
+                            </div>
+                        </div>";
+//echo "<br><br>";
 echo "<img src=\"IMG-muestra-imagen.php?idViajes=".$rows['idViajes']."\">";
-echo "<br><br>";
+//echo "<br><br>";
+
+    echo "</a>
+                    <div class=\"portfolio-caption\">
+                        <h4>Dreams</h4>
+                        <p class=\"text-muted\">Website Design</p>
+                    </div>
+                </div>";
 }
 // Cerramos la conexion a la base de datos
 $conn->close();
