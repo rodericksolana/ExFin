@@ -1,39 +1,20 @@
 
+CREATE TABLE exf_Usuarios (idUsuario int primary key auto_increment,  eMail varchar (50) not null, Pwd varchar (50) not null, TipoUsuario boolean not null);
 
-CREATE TABLE exf_Agencia ( idAgencia int primary key auto_increment, Nombre varchar (50) not null, Direccion varchar (50) not null, DireccionContacto varchar (50) not null, TelefonosContacto varchar (100) not null, ImagenPortada varchar (100));
+CREATE TABLE exf_Agencia ( idAgencia int primary key auto_increment, NombreAgencia varchar (50) not null, DireccionAgencia varchar (50) not null, EmailAgencia varchar (50) not null, TelefonoAgencia varchar (100) not null, ImagenAgencia varchar (100));
 
-CREATE TABLE exf_Viajes ( idViajes int primary key auto_increment, TipoVuelo varchar (50) not null, NombreDestino varchar (50) not null, Descripcion varchar (50), Fotografias , LugaresDisponibles int not null,  Precios int not null, FechaViajes date);
+CREATE TABLE exf_Viajes ( idViajes int primary key auto_increment, TipoViaje varchar (50) not null, NombreDestino varchar (50) not null, Descripcion varchar (50), Fotografias blob , LugaresDisponibles int not null,  Precios int not null, FechaPartida date, FechaResgreso date, MedioTransporte varchar (50), Duracion int);
 
-CREATE TABLE exf_Clientes (idClientes int primary key auto_increment, Nombre varchar (50) not null, ApPaterno varchar (50) notnull, ApMaterno varchar (50), fotografía blob, direccion varchar (100), Telefono varchar (50));
+CREATE TABLE exf_Clientes (idUsuario int, Nombre varchar (50), ApPaterno varchar (50), ApMaterno varchar (50), fotografía blob, direccion varchar (100), Telefono varchar (50), FOREIGN KEY (idUsuario) REFERENCES exf_Usuarios(idUsuario));
 
-CREATE TABLE exf_FechasViajeReserva (idFechasViajeReserva int primary key auto_increment, idClientes int , FechaPartida date , FechaRegreso date , MedioTransporte varchar (50), Duracion int not null, FOREIGN KEY (idClientes) REFERENCES exf_Clientes(idClientes), );
-
-insert into exf_Agencia (Nombre, Direccion, DireccionContacto, TelefonosContacto , ImagenPortada) values ('La Viajera', 'Paseo de la reforma', '52897456', '')
-
+CREATE TABLE exf_ViajeReserva (idViajeReserva int primary key auto_increment, idUsuario int, idViajes int,  FOREIGN KEY (idUsuario) REFERENCES exf_Clientes(idUsuario), FOREIGN KEY (idViajes) REFERENCES exf_Viajes(idViajes));
 
 
 
-insert into Alumno (Nombre, Appaterno, Apmaterno, Matricula, email) values ('Pancho', 'Melas','Rosas','A0298745','panchoToca@gmail.com');
-
-
-CREATE TABLE Vehiculos ( id int primary key auto_increment, Tag varchar (10) not null, Placas varchar (50) not null, punto_entrada varchar (50) not null, punto_salida varchar (100) not null, hora_ingreso timestamp not null default current_timestamp on update current_timestamp);
-
-
-insert into Vehiculos (Tag, Placas, punto-entrada, punto-salida) values ('SSD234', '564ZHR', '', '');
+insert into exf_Agencia (NombreAgencia, DireccionAgencia, EmailAgencia, TelefonoAgencia, ImagenAgencia) values ('La Viajera', 'Paseo de la reforma', 'ravnos_merol@hotmail.com', '52897456', 'www');
 
 
 
-
-CREATE TABLE `Vehiculos` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `tag` varchar(100) NOT NULL,
-  `placas` varchar(40) NOT NULL,
-  `punto_entrada` varchar(100) NOT NULL,
-  `hora_ingreso` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+insert into exf_Usuarios (eMail, Pwd, TipoUsuario) values ('rsolana', 'test', 1);
 
 
-CREATE TABLE Perros ( id int primary key auto_increment, categoria varchar (50), nombre varchar (50));
-
-insert into Perros (categoria, nombre) values ('Perros pequenios', 'Chihuahua');
