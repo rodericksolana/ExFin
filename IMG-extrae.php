@@ -10,7 +10,7 @@ if ($conn->connect_error) {
 $sql = "SELECT id, imagen FROM imagenes order by id desc limit 5";
 $result = $conn->query($sql);
 while ($rows = $result->fetch_assoc()){
-echo $rows['id'];
+//echo $rows['id'];
 echo "<br><br>";
 echo "<img src=\"IMG-muestra-imagen.php?id=".$rows['id']."\">";
 echo "<br><br>";
