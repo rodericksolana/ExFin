@@ -22,9 +22,10 @@ $data=$row['Fotografias'];
 }
 if ($type=="pjpeg") $type="jpeg";
 Header ("Content-type:$type");
-    alert($data);
 echo $data;
 }
+
+echo $data;
 // Cerramos la conexion a la base de datos
 $conn->close();
 
