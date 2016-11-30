@@ -27,7 +27,7 @@ echo "<img src=\"".$rows['Fotografias']."\">";
 
     echo "</a>
                     <div class=\"portfolio-caption\">
-                        <h4>Dreams</h4>
+                        <h4>$rows['NombreDestino']</h4>
                         <p class=\"text-muted\">Website Design</p>
                     </div>
                 </div>";
