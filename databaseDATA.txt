@@ -1,0 +1,39 @@
+
+
+CREATE TABLE exf_Agencia ( idAgencia int primary key auto_increment, Nombre varchar (50) not null, Direccion varchar (50) not null, DireccionContacto varchar (50) not null, TelefonosContacto varchar (100) not null, ImagenPortada varchar (100));
+
+CREATE TABLE exf_Viajes ( idViajes int primary key auto_increment, TipoVuelo varchar (50) not null, NombreDestino varchar (50) not null, Descripcion varchar (50), Fotografias , LugaresDisponibles int not null,  Precios int not null, FechaViajes date);
+
+CREATE TABLE exf_Clientes (idClientes int primary key auto_increment, Nombre varchar (50) not null, ApPaterno varchar (50) notnull, ApMaterno varchar (50), fotografía blob, direccion varchar (100), Telefono varchar (50));
+
+CREATE TABLE exf_FechasViajeReserva (idFechasViajeReserva int primary key auto_increment, idClientes int , FechaPartida date , FechaRegreso date , MedioTransporte varchar (50), Duracion int not null, FOREIGN KEY (idClientes) REFERENCES exf_Clientes(idClientes), );
+
+insert into exf_Agencia (Nombre, Direccion, DireccionContacto, TelefonosContacto , ImagenPortada) values ('La Viajera', 'Paseo de la reforma', '52897456', '')
+
+
+
+
+insert into Alumno (Nombre, Appaterno, Apmaterno, Matricula, email) values ('Pancho', 'Melas','Rosas','A0298745','panchoToca@gmail.com');
+
+
+CREATE TABLE Vehiculos ( id int primary key auto_increment, Tag varchar (10) not null, Placas varchar (50) not null, punto_entrada varchar (50) not null, punto_salida varchar (100) not null, hora_ingreso timestamp not null default current_timestamp on update current_timestamp);
+
+
+insert into Vehiculos (Tag, Placas, punto-entrada, punto-salida) values ('SSD234', '564ZHR', '', '');
+
+
+
+
+CREATE TABLE `Vehiculos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tag` varchar(100) NOT NULL,
+  `placas` varchar(40) NOT NULL,
+  `punto_entrada` varchar(100) NOT NULL,
+  `hora_ingreso` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE Perros ( id int primary key auto_increment, categoria varchar (50), nombre varchar (50));
+
+insert into Perros (categoria, nombre) values ('Perros pequenios', 'Chihuahua');
