@@ -11,7 +11,7 @@ $sql = "SELECT idViajes, NombreDestino, Fotografias FROM exf_Viajes order by idV
 $result = $conn->query($sql);
 while ($rows = $result->fetch_assoc()){
 //echo $rows['id'];
-    echo "<div class=\"col-md-4 col-sm-6 portfolio-item\">
+    echo "<div class=\"col-md-6 col-sm-6 portfolio-item\">
             <a href=\"#portfolioModal6\" class=\"portfolio-link\" data-toggle=\"modal\">
                 <div class=\"portfolio-hover\">
                             <div class=\"portfolio-hover-content\">
@@ -19,10 +19,11 @@ while ($rows = $result->fetch_assoc()){
                             </div>
                         </div>";
 //echo "<br><br>";
-echo "<img src=\".$rows['Fotografias']."\>";
-
-    echo "<img src =\"http://mediawiki.talentum.natware.mx/images/thumb/c/c6/Quechulachiapas.2.jpg/400px-Quechulachiapas.2\">";
+echo "<img src=\"".$rows['Fotografias']."\">";
+  //  echo "<img src =\"http://mediawiki.talentum.natware.mx/images/thumb/c/c6/Quechulachiapas.2.jpg/400px-Quechulachiapas.2\">";
 //echo "<br><br>";
+// var_dump ($rows);
+// var_dump ($rows['Fotografias']);
 
     echo "</a>
                     <div class=\"portfolio-caption\">
