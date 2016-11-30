@@ -19,9 +19,9 @@ while ($rows = $result->fetch_assoc()){
                             </div>
                         </div>";
 //echo "<br><br>";
-//echo "<img src=\"IMG-muestra-imagen.php?idViajes=".$rows['idViajes']."\">";
+echo "<img src=\"IMG-muestra-imagen.php?idViajes=".$rows['idViajes']."\">";
 
-    echo "<img src =\"http://mediawiki.talentum.natware.mx/images/thumb/c/c6/Quechulachiapas.2.jpg/400px-Quechulachiapas.2""\">";
+    echo "<img src =\"http://mediawiki.talentum.natware.mx/images/thumb/c/c6/Quechulachiapas.2.jpg/400px-Quechulachiapas.2\">";
 //echo "<br><br>";
 
     echo "</a>
