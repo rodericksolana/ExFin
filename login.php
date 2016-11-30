@@ -12,7 +12,7 @@ require_once("config.php");
 class Database{
 
     public function closeDataBase(){
-        $conn=null;
+        $con=null;
 
     }
     /* this checks if the user exists
