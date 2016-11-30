@@ -12,14 +12,16 @@ $result = $conn->query($sql);
 while ($rows = $result->fetch_assoc()){
 //echo $rows['id'];
     echo "<div class=\"col-md-4 col-sm-6 portfolio-item\">
-<a href=\"#portfolioModal6\" class=\"portfolio-link\" data-toggle=\"modal\">
- <div class=\"portfolio-hover\">
+            <a href=\"#portfolioModal6\" class=\"portfolio-link\" data-toggle=\"modal\">
+                <div class=\"portfolio-hover\">
                             <div class=\"portfolio-hover-content\">
                                 <i class=\"fa fa-plus fa-3x\"></i>
                             </div>
                         </div>";
 //echo "<br><br>";
-echo "<img src=\"IMG-muestra-imagen.php?idViajes=".$rows['idViajes']."\">";
+//echo "<img src=\"IMG-muestra-imagen.php?idViajes=".$rows['idViajes']."\">";
+
+    echo "<img src =\"http://mediawiki.talentum.natware.mx/images/thumb/c/c6/Quechulachiapas.2.jpg/400px-Quechulachiapas.2""\">";
 //echo "<br><br>";
 
     echo "</a>
