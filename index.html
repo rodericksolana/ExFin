@@ -1,4 +1,15 @@
 <!DOCTYPE html>
+
+<?php
+// incluimos el archivo de configuracion de la base de datos
+include_once("config.php");
+
+// obtenemos los datos en forma descendente
+// $result = mysql_query("SELECT * FROM Vehiculos ORDER BY id DESC"); // mysql_query ya esta depredicado
+$result = mysqli_query($con, "SELECT * FROM Vehiculos ORDER BY id DESC"); // usemos mysqli_query
+?>
+
+
 <html lang="en">
 
 <head>
@@ -133,6 +144,8 @@
                     <h3 class="section-subheading text-muted">Revisa nuestras &uacute;ltimas experiencias.</h3>
                 </div>
             </div>
+
+
             <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
@@ -205,6 +218,22 @@
                         <p class="text-muted">Website Design</p>
                     </div>
                 </div>
+
+
+                <?php
+        //while($res = mysql_fetch_array($result)) { // mysql_fetch_array deprecado, usemos ahora mysqli_fetch_array
+        while($res = mysqli_fetch_array($result)) {
+            echo "<tr>";
+                echo "<td>".$res['Tag']."</td>";
+                echo "<td>".$res['Placas']."</td>";
+                echo "<td>".$res['punto_entrada']."</td>";
+                echo "<td>".$res['hora_ingreso']."</td>";
+                echo "<td><a href=\"editar.php?id=$res[id]\">Editar registro</a> | <a href=\"borrar.php?id=$res[id]\" onClick=\"return confirm('Est&aacute; seguro de borrar este registro?')\">Borrar</a></td>";
+                }
+                ?>
+
+
+
                 <!--
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
