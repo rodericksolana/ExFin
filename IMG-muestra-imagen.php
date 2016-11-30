@@ -25,7 +25,6 @@ Header ("Content-type:$type");
 echo $data;
 }
 
-echo $data;
 // Cerramos la conexion a la base de datos
 $conn->close();
 
