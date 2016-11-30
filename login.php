@@ -6,7 +6,7 @@
  * Time: 04:41 PM
  */
 
-
+echo "Entre a login.php";
 require_once("config.php");
 
 class Database{
