@@ -3,7 +3,7 @@ CREATE TABLE exf_Usuarios (idUsuario int primary key auto_increment,  eMail varc
 
 CREATE TABLE exf_Agencia ( idAgencia int primary key auto_increment, NombreAgencia varchar (50) not null, DireccionAgencia varchar (50) not null, EmailAgencia varchar (50) not null, TelefonoAgencia varchar (100) not null, ImagenAgencia varchar (100));
 
-CREATE TABLE exf_Viajes ( idViajes int primary key auto_increment, TipoViaje varchar (50) not null, NombreDestino varchar (50) not null, Descripcion varchar (50), Fotografias blob , LugaresDisponibles int not null,  Precios int not null, FechaPartida date, FechaResgreso date, MedioTransporte varchar (50), Duracion int);
+CREATE TABLE exf_Viajes ( idViajes int primary key auto_increment, TipoViaje varchar (50) not null, NombreDestino varchar (50) not null, Descripcion varchar (50), Fotografias blob , LugaresDisponibles int not null,  Precios int not null, FechaPartida date, FechaResgreso date, MedioTransporte varchar (50));
 
 CREATE TABLE exf_Clientes (idUsuario int, Nombre varchar (50), ApPaterno varchar (50), ApMaterno varchar (50), fotografía blob, direccion varchar (100), Telefono varchar (50), FOREIGN KEY (idUsuario) REFERENCES exf_Usuarios(idUsuario));
 
@@ -11,10 +11,16 @@ CREATE TABLE exf_ViajeReserva (idViajeReserva int primary key auto_increment, id
 
 
 
+insert into exf_Usuarios (eMail, Pwd, TipoUsuario) values ('rsolana', 'test', 1);
+
 insert into exf_Agencia (NombreAgencia, DireccionAgencia, EmailAgencia, TelefonoAgencia, ImagenAgencia) values ('La Viajera', 'Paseo de la reforma', 'ravnos_merol@hotmail.com', '52897456', 'www');
 
 
 
-insert into exf_Usuarios (eMail, Pwd, TipoUsuario) values ('rsolana', 'test', 1);
+
+insert into exf_Viajes (TipoViaje, NombreDestino, Descripcion, LugaresDisponibles, Precios, FechaPartida, FechaResgreso) values ('nacional', 'Monterrey', 'Carne Asada', 10, 1000, '2016-12-24', '2016-12-31' ) , ('internacional', 'China', 'Muralla China', 5, 25000, '2016-12-05', '2016-12-23');
 
 
+insert into exf_Viajes (TipoViaje, NombreDestino, Descripcion, LugaresDisponibles, Precios, FechaPartida, FechaResgreso) values ('nacional', 'Chiapas', 'Agua Azul', 15, 1000, '2016-12-20', '2016-12-25' ) , ('nacional', 'Veracruz', 'Torito Licor', 12, 850, '2016-12-02', '2016-12-08'), ('internacional', 'Italia', 'Florencia', 20, 23000, '2016-12-01', '2016-12-20');
+
+insert into exf_Viajes (TipoViaje, NombreDestino, Descripcion, LugaresDisponibles, Precios, FechaPartida, FechaResgreso) values ('internacional', 'Grecia', 'Isla mykonos', 10, 25000, '2017-01-01', '2017-01-14' ) , ('nacional', 'Valle de bravo', 'Paseo en lancha', 30, 500, '2017-01-01', '2017-01-08');

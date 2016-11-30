@@ -9,10 +9,10 @@ if ($conn->connect_error) {
 // hacemos el query
 
 //verificamos si el id de la imagen es pasada del archivo IMG-extrae.php
-if (isset($_GET['id'])){
-$id=$_GET['id'];
+if (isset($_GET['idViajes'])){
+$idViajes=$_GET['idViajes'];
 //hacemos el query
-$sql = "SELECT imagen FROM imagenes WHERE id=$id";
+$sql = "SELECT imagen FROM imagenes WHERE idViajes=$idViajes";
 //echo $query;
 $result = $conn->query($sql);
 $row = mysqli_fetch_array($result);
