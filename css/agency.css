@@ -744,3 +744,9 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
+
+.imagenViaje{
+
+  height: 400px;
+  weight: 400px;
+}
