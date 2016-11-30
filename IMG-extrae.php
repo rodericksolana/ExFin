@@ -7,7 +7,7 @@ if ($conn->connect_error) {
     die("Conexion fallida: " . $conn->connect_error);
 }
 // hacemos el query
-$sql = "SELECT idViajes, NombreDestino, Fotografias FROM imagenes order by idViajes desc limit 5";
+$sql = "SELECT idViajes, NombreDestino, Fotografias FROM exf_Viajes order by idViajes desc limit 5";
 $result = $conn->query($sql);
 while ($rows = $result->fetch_assoc()){
 //echo $rows['id'];

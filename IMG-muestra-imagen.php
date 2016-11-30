@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 if (isset($_GET['idViajes'])){
 $idViajes=$_GET['idViajes'];
 //hacemos el query
-$sql = "SELECT imagen FROM imagenes WHERE idViajes=$idViajes";
+$sql = "SELECT Fotografias FROM exf_Viajes WHERE idViajes=$idViajes";
 //echo $query;
 $result = $conn->query($sql);
 $row = mysqli_fetch_array($result);
