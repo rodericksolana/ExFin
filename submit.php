@@ -26,7 +26,7 @@ if(isset($_POST["login"])){
             else {
 
                 echo '<script language="javascript">alert("Datos Incorrectos");
-                    var url = "http://www.google.com/";
+                    var url = "http://ubiquitous.csf.itesm.mx/~daw-1129839/ExFin/login.html";
                     window.location.href = url;</script>';
 
             }
