@@ -7,6 +7,7 @@
  */
 
 echo $_POST["Pwd"];
+echo $_POST["login"];
 
 /*
 require_once("login.php");
