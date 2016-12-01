@@ -14,8 +14,6 @@ echo $_POST["login"];
 
 if(isset($_POST["login"])){
 
-    echo "adentro de login";
-
     $Pwd=$_POST["Pwd"];
     $eMail=$_POST["eMail"];
     if(!empty($eMail) && !empty($Pwd)){
@@ -24,10 +22,10 @@ if(isset($_POST["login"])){
         $num = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
 
         echo $num;
-        if($num.lengh()>0)
+        if($num>0)
         echo "success";
                // header("Location:success.html");
-            ELSE
+            else
                 //header("Location:error.html");
             echo "Fallo";
         }
