@@ -16,11 +16,11 @@ if(isset($_POST["login"])){
     $eMail=$_POST["eMail"];
     if(!empty($eMail) && !empty($Pwd)){
         $sql = "select idUsuario from exf_Usuarios where eMail='$eMail' and Pwd= '$Pwd'";
-        echo $sql;
+        //echo $sql;
         $num = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
         //echo "Terminé el query";
         //echo $num;
-        if($num == 1) {
+        if($num != empty) {
             echo "success";
 
            // header("Location:cliente.html");
