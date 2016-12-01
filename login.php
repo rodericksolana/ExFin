@@ -22,9 +22,10 @@ class Database{
     public function checkUserExist($eMail,$con){
 
         $sql="select count(*) from exf_Usuarios where eMail='$eMail'";
-        echo "despues del sql";
+
         $st=$con->prepare($sql);
         $st->bindValue(':eMail',$eMail);
+        echo "despues del sql";
         $st->execute();
         $num=$st->fetchColumn();
         $st=null;
