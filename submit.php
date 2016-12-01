@@ -83,9 +83,9 @@ else if(isset($_POST["register"])){
             $res = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
 
             while ($rows = $res->fetch_assoc()) {
-                $new = $rows['id_Usuario'];
-                echo "adentro del while: ";  echo $new;
-                $sql = "insert into exf_Clientes (idUsusario, Nombre, ApPaterno) values ('$new','$Nombre', '$ApPaterno')";
+                echo "adentro del while: ";
+                echo $rows['id_Usuario'];
+                $sql = "insert into exf_Clientes (idUsusario, Nombre, ApPaterno) values (\"".$rows['id_Usuario']."\",'$Nombre', '$ApPaterno')";
                 $res2 = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
                 echo "inserte";
             }
