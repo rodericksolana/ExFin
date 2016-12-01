@@ -24,11 +24,15 @@ if(isset($_POST["login"])){
 
 echo"Adentro del if antes del while";
             while ($rows = $nume->fetch_assoc()) {
-                if($nume['TipoUsuario'] == 1)
-                 header("Location:admin.html");
+                if($nume['TipoUsuario'] == 1) {
+                    echo "while 1";
+                    header("Location:admin.html");
+                }
 
-                else
-                 header("Location:cliente.html");
+                else {
+                    echo "while0;
+                    header("Location:cliente.html");
+                }
 
             }
 
