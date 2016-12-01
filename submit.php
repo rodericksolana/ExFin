@@ -6,13 +6,12 @@
  * Time: 04:59 PM
  */
 
+require_once("config.php");
 echo $_POST["Pwd"];
 echo $_POST["login"];
 
+//require_once("login.php");
 
-require_once("login.php");
-$db=new Database();
-echo "Antes del IF";
 if(isset($_POST["login"])){
 
     echo "adentro de login";
@@ -20,9 +19,12 @@ if(isset($_POST["login"])){
     $Pwd=$_POST["Pwd"];
     $eMail=$_POST["eMail"];
     if(!empty($eMail) && !empty($Pwd)){
-        if($db->checkUserExist($eMail,$con)){//if this user exists
-            if($db->authen($eMail,$Pwd,$con))
-                echo "success";
+        $sql = "select count(*) from exf_Usuarios where eMail='$eMail'";
+        echo $sql;
+        $num = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
+
+        if($num.lengh()>0)
+        echo "success";
                // header("Location:success.html");
             ELSE
                 //header("Location:error.html");
@@ -31,9 +33,6 @@ if(isset($_POST["login"])){
         else
             //header("Location:error.html");
         echo "Falla3";
-
-    }
-    $db->closeDataBase();
 }
 else if(isset($_POST["register"])){
     $eMail=$_POST['eMail'];
