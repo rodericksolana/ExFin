@@ -39,5 +39,7 @@ else if(isset($_POST["register"])){
 }
 else  echo "No recibi nada";
 
+echo $Pwd;
+
 
 ?>
