@@ -23,6 +23,7 @@ if(isset($_POST["login"])){
         echo $sql;
         $num = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
 
+        echo $num;
         if($num.lengh()>0)
         echo "success";
                // header("Location:success.html");
