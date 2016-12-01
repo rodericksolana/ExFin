@@ -19,7 +19,7 @@ if(isset($_POST["login"])){
         echo $sql;
         $num = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
         //echo "Terminé el query";
-        echo $num;
+        //echo $num;
         if($num == 1) {
             echo "success";
 
