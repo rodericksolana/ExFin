@@ -82,7 +82,7 @@ else if(isset($_POST["register"])){
 
             while ($rows = $res->fetch_assoc()) {
                 $new = $rows['id_Usuario'];
-
+                echo "adentro del while: ";  echo $new;
                 $sql = "insert into exf_Clientes (idUsusario, Nombre, ApPaterno) values ('$new','$Nombre', '$ApPaterno')";
 
             }
