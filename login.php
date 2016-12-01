@@ -19,14 +19,16 @@ class Database{
     @param email is users email
     @param $conn is the connection object
     */
-    public function checkUserExist($eMail,$con){
+    public function checkUserExist($eMail,$con)
+    {
 
-        $sql="select count(*) from exf_Usuarios where eMail='$eMail'";
-echo $sql;
-        $num = mysqli_query($con ,$sql)  or die ('Query incorrecto: ' .$sql);
+        $sql = "select count(*) from exf_Usuarios where eMail='$eMail'";
+        echo $sql;
+        $num = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
 
         echo "Esto vale num";
         echo $num;
+
 
         if($num>0)
             return true;
