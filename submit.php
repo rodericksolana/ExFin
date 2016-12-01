@@ -22,14 +22,15 @@ if(isset($_POST["login"])){
         //echo $num;
         if($num > 0) {
             echo "success";
+            header("Location:success.html");
         }
                // header("Location:success.html");
             else {
                 //header("Location:error.html");
-                echo "Fallo";
+                //echo "Fallo";
             }
 
-            echo "saliendo del if";
+            //echo "saliendo del if";
         }
         else
             //header("Location:error.html");
