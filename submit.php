@@ -84,13 +84,14 @@ else if(isset($_POST["register"])){
                 $new = $rows['id_Usuario'];
                 echo "adentro del while: ";  echo $new;
                 $sql = "insert into exf_Clientes (idUsusario, Nombre, ApPaterno) values ('$new','$Nombre', '$ApPaterno')";
-
+                $res2 = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
+                echo "inserte";
             }
 
-
-            echo '<script language="javascript">
+echo "Final del if";
+           /* echo '<script language="javascript">
                     var url = "http://ubiquitous.csf.itesm.mx/~daw-1129839/ExFin/registraCliente.html";
-                    window.location.href = url;</script>';
+                    window.location.href = url;</script>';*/
         }
 
 
