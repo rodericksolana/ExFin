@@ -26,6 +26,7 @@ echo $sql;
         $num = mysqli_query($con ,$sql);
         echo "Esto vale num";
         echo $num;
+
         if($num>0)
             return true;
         else
