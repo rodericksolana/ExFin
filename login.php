@@ -25,7 +25,7 @@ class Database{
 
         $st=$con->prepare($sql);
 
-        $st->bindValue('$eMail',$eMail);
+        //$st->bindValue('$eMail',$eMail);
         echo "despues del sql";
         $st->execute();
         $num=$st->fetchColumn();
