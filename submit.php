@@ -37,7 +37,7 @@ if(isset($_POST["login"])){
         }
         else
             //header("Location:error.html");
-        echo "Falla3";
+        echo "Falta uno de los datos";
 }
 else if(isset($_POST["register"])){
     $eMail=$_POST['eMail'];
@@ -49,10 +49,5 @@ else if(isset($_POST["register"])){
     }
     $db->closeDataBase();
 }
-else { echo "No recibi nada";}
-
-echo "salí del if";
-
-
 
 ?>
