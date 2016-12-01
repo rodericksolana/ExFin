@@ -24,12 +24,10 @@ if(isset($_POST["login"])){
             header("Location:cliente.html");
         }
             else {
-
-                echo '<script language="javascript">alert("Datos Incorrectos");</script>';
                  header("Location:login.html");
+                echo '<script language="javascript">alert("Datos Incorrectos");</script>';
             }
 
-            //echo "saliendo del if";
         }
         else
             //header("Location:error.html");
