@@ -77,7 +77,7 @@ else if(isset($_POST["register"])){
 
             while ($rows = $res->fetch_assoc()) {
 
-                $sql = "insert into exf_Clientes (idUsusario, Nombre, ApPaterno) values ("$res['id_Usuario']",'$Nombre', '$ApPaterno')";
+                $sql = "insert into exf_Clientes (idUsusario, Nombre, ApPaterno) values (.$res['id_Usuario'].,'$Nombre', '$ApPaterno')";
 
             }
 
