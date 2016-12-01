@@ -21,9 +21,9 @@ class Database{
     */
     public function checkUserExist($eMail,$con){
         echo "Entre a la funcion";
-        echo :eMail;
 
-        $sql="select count(*) from exf_Usuarios where eMail=:eMail";
+
+        $sql="select count(*) from exf_Usuarios where eMail='$eMail'";
         $st=$con->prepare($sql);
         $st->bindValue(':eMail',$eMail);
         $st->execute();
@@ -41,7 +41,7 @@ class Database{
     @param $conn is the connection object
     */
     public function authen($eMail,$Pwd,$con){
-        $sql="select Pwd from exf_Usuarios where eMail=:eMail";
+        $sql="select Pwd from exf_Usuarios where eMail='$eMail'";
         $st=$con->prepare($sql);
         $st->bindValue(":eMail",$eMail);
         $res=$st->execute();
