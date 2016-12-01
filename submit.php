@@ -60,8 +60,9 @@ else if(isset($_POST["register"])){
 
         $res = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
 
-        <script language="javascript"> var url = "http://ubiquitous.csf.itesm.mx/~daw-1129839/ExFin/registraCliente.html";
-                    window.location.href = url;</script>
+        echo '<script language="javascript">
+                    var url = "http://ubiquitous.csf.itesm.mx/~daw-1129839/ExFin/registraCliente.html";
+                    window.location.href = url;</script>';
 
     }
 }
