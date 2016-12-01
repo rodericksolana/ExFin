@@ -48,52 +48,28 @@ if(isset($_POST["login"])){
         echo "Falta uno de los datos";
 }
 else if(isset($_POST["register"])){
-
     $eMail=$_POST['eMail'];
     $Pwd=$_POST['Pwd'];
-    $Nombre=$_POST['Nombre'];
-    $ApPaterno=$_POST['ApPaterno'];
+    if(!empty($eMail) && !empty($Pwd)){
 
-    if(!empty($eMail) && !empty($Pwd))
-    {
-
-        $sql = "select idUsuario from exf_Usuarios where eMail='$eMail'";
+        $sql = "insert into exf_Usuarios (eMail, Pwd, TipoUsuario) values ('$eMail','$Pwd', 0)";
 
         $res = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
 
-        if(mysqli_num_rows($nume) > 0) {
-            echo '<script language="javascript">alert("ERROR! Ese correo ya se ha registrado antes");
-                    var url = "http://ubiquitous.csf.itesm.mx/~daw-1129839/ExFin/login.html";
-                    window.location.href = url;</script>';
+        $sql = "select idUsuario from exf_Usuarios where eMail='$eMail' and Pwd= '$Pwd'";
+
+        $res = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
+
+        echo "Tengo esto";
+        while ($rows = $res->fetch_assoc()) {
+
         }
 
-        else
-        {
-
-            $sql = "insert into exf_Usuarios (eMail, Pwd, TipoUsuario) values ('$eMail','$Pwd', 0)";
-
-            $res = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
-
-            $sql = "select idUsuario from exf_Usuarios where eMail='$eMail' and Pwd= '$Pwd'";
-
-            $res = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
-
-            while ($rows = $res->fetch_assoc()) {
-		$new = $res['id_Usuario'];
-
-                $sql = "insert into exf_Clientes (idUsusario, Nombre, ApPaterno) values ('$new','$Nombre', '$ApPaterno')";
-
-            }
-
-
-            echo '<script language="javascript">
+    /*
+        echo '<script language="javascript">
                     var url = "http://ubiquitous.csf.itesm.mx/~daw-1129839/ExFin/registraCliente.html";
                     window.location.href = url;</script>';
-        }
-
-
-
-
+    */
 
     }
 }
