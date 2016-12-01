@@ -48,11 +48,14 @@ if(isset($_POST["login"])){
         echo "Falta uno de los datos";
 }
 else if(isset($_POST["register"])){
+
     $eMail=$_POST['eMail'];
     $Pwd=$_POST['Pwd'];
     $Nombre=$_POST['Nombre'];
     $ApPaterno=$_POST['ApPaterno'];
-    if(!empty($eMail) && !empty($Pwd)){
+
+    if(!empty($eMail) && !empty($Pwd))
+    {
 
         $sql = "select idUsuario from exf_Usuarios where eMail='$eMail'";
 
