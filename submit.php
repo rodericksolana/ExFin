@@ -30,7 +30,7 @@ echo"Adentro del if antes del while";
                 }
 
                 else {
-                    echo "while0;
+                    echo "while0";
                     header("Location:cliente.html");
                 }
 
