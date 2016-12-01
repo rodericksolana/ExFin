@@ -22,7 +22,7 @@ class Database{
     public function checkUserExist($eMail,$con){
 
         $sql="select count(*) from exf_Usuarios where eMail='$eMail'";
-
+echo $sql;
         $num = mysqli_query($con ,$sql);
         echo "Esto vale num";
         echo $num;
