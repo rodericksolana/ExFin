@@ -24,11 +24,12 @@ class Database{
         $sql="select count(*) from exf_Usuarios where eMail='$eMail'";
 
         $st=$con->prepare($sql);
-        echo "despues del sql";
-        $st->bindValue(':eMail',$eMail);
 
+        $st->bindValue('eMail',$eMail);
+        echo "despues del sql";
         $st->execute();
         $num=$st->fetchColumn();
+        echo "despues del sql22";
         $st=null;
         echo "Esto vale num";
         echo $num;
