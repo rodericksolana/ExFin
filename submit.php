@@ -10,7 +10,7 @@
 require_once("login.php");
 $db=new Database();
 
-echo $_POST["data"];
+echo $_POST['data'];
 
 if(isset($_POST["login"])){
     $Pwd=$_POST["Pwd"];
