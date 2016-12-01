@@ -5,9 +5,11 @@
  * Date: 30/11/16
  * Time: 04:59 PM
  */
-echo "Estoy en el submit";
+
+
 require_once("login.php");
 $db=new Database();
+
 echo $_POST["data"];
 
 if(isset($_POST["login"])){
