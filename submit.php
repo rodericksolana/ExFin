@@ -20,7 +20,7 @@ if(isset($_POST["login"])){
         $num = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
         //echo "Terminé el query";
         //echo $num;
-        if($num != empty()) {
+        if(!empty($num)) {
             echo "success";
 
            // header("Location:cliente.html");
