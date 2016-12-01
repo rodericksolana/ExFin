@@ -6,7 +6,7 @@
  * Time: 04:59 PM
  */
 
-echo $_POST["data.Pwd"];
+echo $_POST["data"];
 
 echo "Estoy en el submit";
 require_once("login.php");
