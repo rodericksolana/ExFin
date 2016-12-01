@@ -12,9 +12,7 @@ echo $_POST["login"];
 
 require_once("login.php");
 $db=new Database();
-
-echo $_POST['data'];
-
+echo "Antes del IF";
 if(isset($_POST["login"])){
     $Pwd=$_POST["Pwd"];
     $eMail=$_POST["eMail"];
