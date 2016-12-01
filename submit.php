@@ -15,13 +15,24 @@ if(isset($_POST["login"])){
     $Pwd=$_POST["Pwd"];
     $eMail=$_POST["eMail"];
     if(!empty($eMail) && !empty($Pwd)){
-        $sql = "select idUsuario from exf_Usuarios where eMail='$eMail' and Pwd= '$Pwd'";
+        $sql = "select idUsuario, TipoUsuario from exf_Usuarios where eMail='$eMail' and Pwd= '$Pwd'";
 
         $nume = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
         //echo "Terminé el query";
         //echo $num;
         if(mysqli_num_rows($nume) > 0) {
-            header("Location:cliente.html");
+
+
+            while ($rows = $nume->fetch_assoc()) {
+                if($nume['TipoUsuario'] == 1)
+                 header("Location:admin.html");
+
+                else
+                 header("Location:cliente.html");
+
+            }
+
+
         }
             else {
 
