@@ -21,14 +21,14 @@ if(isset($_POST["login"])){
         //echo "Terminé el query";
         //echo $num;
         if($num <= 0) {
-
-            echo '<script language="javascript">alert("Datos Incorrectos");</script>';
+            echo "success";
 
            // header("Location:cliente.html");
         }
                // header("Location:success.html");
             else {
-                echo "success";
+
+                echo '<script language="javascript">alert("Datos Incorrectos");</script>';
                  //header("Location:login.html");
                 //echo "Fallo";
             }
