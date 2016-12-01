@@ -23,7 +23,8 @@ class Database{
 
         $sql="select count(*) from exf_Usuarios where eMail='$eMail'";
 echo $sql;
-        $num = mysqli_query($con ,$sql);
+        $num = mysqli_query($con ,$sql)  or die ('Query incorrecto: ' .$sql);
+
         echo "Esto vale num";
         echo $num;
 
