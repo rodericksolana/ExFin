@@ -46,6 +46,8 @@ if(isset($_POST["login"])){
     else
         //header("Location:error.html");
         echo "Falta uno de los datos";
+        echo "PWD: ";  echo $Pwd;
+    echo "eMail: ";  echo $eMail;
 }
 else if(isset($_POST["register"])){
 
