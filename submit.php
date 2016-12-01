@@ -6,6 +6,9 @@
  * Time: 04:59 PM
  */
 
+echo $_POST["Pwd"];
+
+echo "Estoy en el submit";
 require_once("login.php");
 $db=new Database();
 if(isset($_POST["login"])){
@@ -39,7 +42,6 @@ else if(isset($_POST["register"])){
 }
 else  echo "No recibi nada";
 
-echo $_POST["Pwd"];
 
 
 ?>
