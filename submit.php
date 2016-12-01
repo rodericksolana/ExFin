@@ -7,8 +7,6 @@
  */
 
 require_once("config.php");
-echo $_POST["Pwd"];
-echo $_POST["login"];
 
 //require_once("login.php");
 
@@ -20,7 +18,7 @@ if(isset($_POST["login"])){
         $sql = "select count(*) from exf_Usuarios where eMail='$eMail'";
         echo $sql;
         $num = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
-
+        echo "Terminé el query";
         echo $num;
         if($num>0)
         echo "success";
