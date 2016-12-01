@@ -20,8 +20,6 @@ class Database{
     @param $conn is the connection object
     */
     public function checkUserExist($eMail,$con){
-        echo "Entre a la funcion";
-
 
         $sql="select count(*) from exf_Usuarios where eMail='$eMail'";
         $st=$con->prepare($sql);
@@ -29,6 +27,8 @@ class Database{
         $st->execute();
         $num=$st->fetchColumn();
         $st=null;
+
+        echo "Esto vale num: " + $num;
         if($num>0)
             return true;
         else
