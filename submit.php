@@ -24,6 +24,8 @@ if(isset($_POST["login"])){
 
 echo"Adentro del if antes del while";
             while ($rows = $nume->fetch_assoc()) {
+
+                echo"dentro del while";
                 if($nume['TipoUsuario'] == 1) {
                     echo "while 1";
                     header("Location:admin.html");
