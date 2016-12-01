@@ -85,7 +85,7 @@ else if(isset($_POST["register"])){
             while ($rows = $res->fetch_assoc()) {
                 echo "adentro del while: ";
                 echo $rows['idUsuario'];
-                $sql = "insert into exf_Clientes (idUsusario, Nombre, ApPaterno) values (\"".$rows['idUsuario']."\",'$Nombre', '$ApPaterno')";
+                $sql = "insert into exf_Clientes (idUsuario, Nombre, ApPaterno) values (\"".$rows['idUsuario']."\",'$Nombre', '$ApPaterno')";
                 $res2 = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
                 echo "inserte";
             }
