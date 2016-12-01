@@ -55,6 +55,8 @@ else if(isset($_POST["register"])){
     $Pwd=$_POST['Pwd'];
     $Nombre=$_POST['Nombre'];
     $ApPaterno=$_POST['ApPaterno'];
+    echo"PAterno";
+    echo $ApPaterno;
 
     if(!empty($eMail) && !empty($Pwd))
     {
