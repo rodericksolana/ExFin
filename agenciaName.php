@@ -14,7 +14,7 @@ $result = $conn->query($sql);
 
 while ($rows = $result->fetch_assoc()) {
 //echo $rows['id'];
-    echo "<div class=\"intro-lead-in\"> Bienvenido a $rows['id']!</div>";
+    echo "<div class=\"intro-lead-in\"> Bienvenido a '$rows['id']'!</div>";
     }
 
 ?>
