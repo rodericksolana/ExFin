@@ -25,7 +25,9 @@ if(isset($_POST["login"])){
         }
             else {
 
-                echo '<script language="javascript">alert("Datos Incorrectos"); window.location = login.html;</script>';
+                echo '<script language="javascript">alert("Datos Incorrectos");
+                    var url = "http://www.google.com/";
+                    window.location.href = url;</script>';
 
             }
 
