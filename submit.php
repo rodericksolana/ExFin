@@ -21,16 +21,12 @@ if(isset($_POST["login"])){
         //echo "Terminé el query";
         //echo $num;
         if(mysqli_num_rows($nume) > 0) {
-            echo "success";
-
-           // header("Location:cliente.html");
+            header("Location:cliente.html");
         }
-               // header("Location:success.html");
             else {
 
                 echo '<script language="javascript">alert("Datos Incorrectos");</script>';
-                 //header("Location:login.html");
-                //echo "Fallo";
+                 header("Location:login.html");
             }
 
             //echo "saliendo del if";
