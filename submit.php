@@ -6,7 +6,9 @@
  * Time: 04:59 PM
  */
 
+echo $_POST["Pwd"];
 
+/*
 require_once("login.php");
 $db=new Database();
 
@@ -43,6 +45,6 @@ else if(isset($_POST["register"])){
 }
 else  echo "No recibi nada";
 
-
+*/
 
 ?>
