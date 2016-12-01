@@ -22,7 +22,7 @@ if(isset($_POST["login"])){
         //echo $num;
         if($num > 0) {
             echo "success";
-            header("Location:cliente.html");
+           // header("Location:cliente.html");
         }
                // header("Location:success.html");
             else {
