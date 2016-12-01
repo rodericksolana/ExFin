@@ -51,11 +51,19 @@ else if(isset($_POST["register"])){
     $eMail=$_POST['eMail'];
     $Pwd=$_POST['Pwd'];
     if(!empty($eMail) && !empty($Pwd)){
-        $db->register($eMail,$Pwd,$con);
-        header("Location:success.html");
+
+        $sql = "insert into exf_Usuarios (eMail, Pwd, TipoUsuario) values ('$eMail','$Pwd', 0)";
+
+        $res = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
+
+        $sql = "select idUsuario from exf_Usuarios where eMail='$eMail' and Pwd= '$Pwd'";
+
+        $res = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
+
+        <script language="javascript"> var url = "http://ubiquitous.csf.itesm.mx/~daw-1129839/ExFin/login.html";
+                    window.location.href = url;</script>
 
     }
-    $db->closeDataBase();
 }
 
 ?>
