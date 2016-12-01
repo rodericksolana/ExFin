@@ -25,7 +25,7 @@ if(isset($_POST["login"])){
         }
             else {
 
-                echo '<script language="javascript">alert("Datos Incorrectos");  header("Location:login.html");</script>';
+                echo '<script language="javascript">alert("Datos Incorrectos"); window.location = login.html;</script>';
 
             }
 
