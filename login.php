@@ -23,14 +23,7 @@ class Database{
 
         $sql="select count(*) from exf_Usuarios where eMail='$eMail'";
 
-        $st=$con->prepare($sql);
-
-        //$st->bindValue('$eMail',$eMail);
-        echo "despues del sql";
-        $st->execute();
-        $num=$st->fetchColumn();
-        echo "despues del sql22";
-        $st=null;
+        $num = mysqli_query($con ,$sql);
         echo "Esto vale num";
         echo $num;
         if($num>0)
