@@ -27,8 +27,8 @@ class Database{
         $st->execute();
         $num=$st->fetchColumn();
         $st=null;
-
-        echo "Esto vale num: " + $num;
+        echo "Esto vale num";
+        echo $num;
         if($num>0)
             return true;
         else
