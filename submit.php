@@ -9,7 +9,7 @@
 echo $_POST["Pwd"];
 echo $_POST["login"];
 
-/*
+
 require_once("login.php");
 $db=new Database();
 
@@ -46,6 +46,5 @@ else if(isset($_POST["register"])){
 }
 else  echo "No recibi nada";
 
-*/
 
 ?>
