@@ -83,13 +83,14 @@ else if(isset($_POST["register"])){
             }
 
 
-        }
-
-    /*
-        echo '<script language="javascript">
+            echo '<script language="javascript">
                     var url = "http://ubiquitous.csf.itesm.mx/~daw-1129839/ExFin/registraCliente.html";
                     window.location.href = url;</script>';
-    */
+        }
+
+
+
+
 
     }
 }
