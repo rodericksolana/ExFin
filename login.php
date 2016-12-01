@@ -21,7 +21,7 @@ class Database{
     */
     public function checkUserExist($eMail,$con){
         echo "Entre a la funcion";
-        echo $eMail;
+        echo :eMail;
 
         $sql="select count(*) from exf_Usuarios where eMail=:eMail";
         $st=$con->prepare($sql);
