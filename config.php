@@ -6,7 +6,7 @@
  * Time: 04:17 AM
  */
 
-echo "Entre a config.php";
+//echo "Entre a config.php";
 define ('HOST', 'localhost');
 define ('USER', '1129839_user');
 define ('PASS', '1129839');

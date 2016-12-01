@@ -14,6 +14,9 @@ require_once("login.php");
 $db=new Database();
 echo "Antes del IF";
 if(isset($_POST["login"])){
+
+    echo "adentro de login";
+
     $Pwd=$_POST["Pwd"];
     $eMail=$_POST["eMail"];
     if(!empty($eMail) && !empty($Pwd)){
