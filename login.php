@@ -24,8 +24,9 @@ class Database{
         $sql="select count(*) from exf_Usuarios where eMail='$eMail'";
 
         $st=$con->prepare($sql);
-        $st->bindValue(':eMail',$eMail);
         echo "despues del sql";
+        $st->bindValue(':eMail',$eMail);
+
         $st->execute();
         $num=$st->fetchColumn();
         $st=null;
