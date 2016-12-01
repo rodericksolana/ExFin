@@ -266,35 +266,11 @@
 
             <form action="submit.php" method="post">
 
-                <div class="top-row">
-                    <div class="field-wrap">
-                        <label>
-                            Nombre<span class="req">*</span>
-                        </label>
-                        <input type="text" required autocomplete="off" name=Nombre />
-                    </div>
 
-                    <div class="field-wrap">
-                        <label>
-                            Apellido Paterno<span class="req">*</span>
-                        </label>
-                        <input type="text"required autocomplete="off" name=ApPaterno/>
-                    </div>
-                </div>
-
-                <div class="field-wrap">
-                    <label>
-                        Correo Electr&oacute;nico<span class="req">*</span>
-                    </label>
-                    <input type="email"required autocomplete="off" name=eMail/>
-                </div>
-
-                <div class="field-wrap">
-                    <label>
-                        Contraseña<span class="req">*</span>
-                    </label>
-                    <input type="password"required autocomplete="off" name=Pwd/>
-                </div>
+                <input type="text" required autocomplete="off" name=Nombre />
+                <input type="text"required autocomplete="off" name=ApPaterno/>
+                <input type=email class=a placeholder=email name=eMail required><br>
+                <input type=password class=a placeholder=Password name=Pwd required><br>
                 <input type=submit class=a value=Registrar name=register>
 
             </form>
@@ -306,23 +282,7 @@
 
             <form action="submit.php" method="post">
 
-                <!--
-                <div class="field-wrap">
-                    <label>
-                        Correo Electr&oacute;nico<span class="req">*</span>
-                    </label>
-                    <input required  name=eMail/>
-                </div>
 
-                <div class="field-wrap">
-                    <label>
-                        Contraseña<span class="req">*</span>
-                    </label>
-                    <input type="password"required  name=Pwd/>
-                </div>
-
-                <input type=submit class=a value=IniciarSesi&oacute;n id=sub name=login>
-            -->
                 <input class=a placeholder=email required name=eMail><br>
                 <input type=password class=a placeholder=password required name=Pwd><br>
                 <input type=submit class=a value=Login id=sub name=login>
