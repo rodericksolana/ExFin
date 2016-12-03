@@ -39,10 +39,16 @@ session_start();
 <body>
 
 Aqui se debe cargar el php:
-<?php
-echo "Esto es lo que regreso:";
-echo "Favorite animal is " . $_SESSION["idSession"] . ".";
-?>
+
+<div id="idSession"> </div>
+<script>
+    $.get( "http://ubiquitous.csf.itesm.mx/~daw-1129839/ExFin/sessionID.php", function( data ) {
+        // alert( "Data Loaded: " + data );
+
+        document.getElementById("idSession").innerHTML = '<i>' + data + '</i>';
+    });
+
+</script>
 
 </body>
 </html>
