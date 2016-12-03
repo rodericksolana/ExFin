@@ -10,9 +10,8 @@ session_start();
 
 
 include_once("config.php");
-
-
-$sql = "select * from exf_Usuarios where idUsuario= $_SESSION[\"idSession\"]";
+$idS = $_SESSION["idSession"];
+$sql = "select eMail from exf_Usuarios where idUsuario= $idS";
 
         $nume = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
 
