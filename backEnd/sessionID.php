@@ -15,9 +15,7 @@ $sql = "select eMail from exf_Usuarios where idUsuario= $idS";
 
         $nume = mysqli_query($con, $sql) or die ('Query incorrecto: ' . $sql);
 
-echo "Esto es lo que regreso:";
 
-echo "<div class=\"intro-lead-in\"> HOLA  " .  $nume . "</div>";
-echo "Favorite animal is " . "algo más" . $_SESSION["idSession"] . ".";
+echo "<div class=\"intro-lead-in\"> HOLA  " .  "rsolana" . "</div>";
 
 ?>
