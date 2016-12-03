@@ -25,10 +25,10 @@ if(isset($_POST["login"])){
 
             while ($rows = $nume->fetch_assoc()) {
                 if($rows['TipoUsuario'] == 1)
-                    header("Location:admin.html");
+                    header("Location:../admin.html");
 
                 else
-                    header("Location:cliente.html");
+                    header("Location:../cliente.html");
 
             }
 
