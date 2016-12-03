@@ -8,6 +8,6 @@
 
 
 echo "Esto es lo que regreso:";
-//echo "Favorite animal is " . $_SESSION["idSession"] . ".";
+echo "Favorite animal is " . $_SESSION["idSession"] . ".";
 
 ?>
