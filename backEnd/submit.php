@@ -25,7 +25,6 @@ if(isset($_POST["login"])){
 
             while ($rows = $nume->fetch_assoc()) {
                 if($rows['TipoUsuario'] == 1) {
-                    session_start();
                     $_SESSION["idSession"] = "green";
                     header("Location:../admin.html");
 
