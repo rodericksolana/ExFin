@@ -40,12 +40,12 @@ session_start();
 
 Aqui se debe cargar el php:
 
-<div id="idSession"> </div>
+<div id="sessionID"> </div>
 <script>
     $.get( "http://ubiquitous.csf.itesm.mx/~daw-1129839/ExFin/sessionID.php", function( data ) {
         // alert( "Data Loaded: " + data );
 
-        document.getElementById("idSession").innerHTML = '<i>' + data + '</i>';
+        document.getElementById("sessionID").innerHTML = '<i>' + data + '</i>';
     });
 
 </script>
