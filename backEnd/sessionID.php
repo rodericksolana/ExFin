@@ -17,7 +17,7 @@ $sql = "select eMail from exf_Usuarios where idUsuario= $idS";
 
 echo "Esto es lo que regreso:";
 
-echo "<div class=\"intro-lead-in\"> HOLA  " .  $_SESSION["idSession"] . "</div>";
+echo "<div class=\"intro-lead-in\"> HOLA  " .  $nume . "</div>";
 echo "Favorite animal is " . "algo más" . $_SESSION["idSession"] . ".";
 
 ?>
