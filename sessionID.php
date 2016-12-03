@@ -9,6 +9,8 @@
 session_start();
 
 echo "Esto es lo que regreso:";
+
+echo "<div class=\"intro-lead-in\"> HOLA  " .  $_SESSION["idSession"] . "</div>";
 echo "Favorite animal is " . "algo más" . $_SESSION["idSession"] . ".";
 
 ?>
