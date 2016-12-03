@@ -6,6 +6,8 @@
  * Time: 04:59 PM
  */
 
+session_start();
+
 include_once("config.php");
 
 //require_once("login.php");

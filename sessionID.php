@@ -6,6 +6,7 @@
  * Time: 12:48 PM
  */
 
+session_start();
 
 echo "Esto es lo que regreso:";
 echo "Favorite animal is " . "algo más" . $_SESSION["idSession"] . ".";
