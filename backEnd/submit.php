@@ -24,11 +24,17 @@ if(isset($_POST["login"])){
 
 
             while ($rows = $nume->fetch_assoc()) {
-                if($rows['TipoUsuario'] == 1)
+                if($rows['TipoUsuario'] == 1) {
+
+                    sessionStorage.setItem("idSession", $rows['idUsuario']);
                     header("Location:../admin.html");
 
-                else
+                }
+
+                else {
                     header("Location:../cliente.html");
+
+                }
 
             }
 
